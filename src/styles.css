@@ -1,17 +1,27 @@
 * {
   padding: 0%;
   margin: 0%;
-/*   overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+button {
+  cursor: pointer;
+}
 /* --------------------    home   --------------------- */
 
-.homepage {
+#home {
   background-image: url("https://img.freepik.com/free-photo/modern-business-building-with-glass-wall-from-empty-floor_1127-3084.jpg?w=996&t=st=1689581329~exp=1689581929~hmac=285f9504371bf854d9d80ddffdffaa5db8b0eaa81d56e73480d4500845d8f3c8");
-  height: 100vh;
   width: 100vw;
   margin: 0 auto;
+  overflow-x: hidden;
 }
+
 /* ------homenav------ */
 .navpage {
   display: flex;
@@ -21,8 +31,9 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
-  width: 90%;
+  width: 89.5%;
   z-index: 2;
+  overflow-x: visible;
 }
 
 .ref img {
@@ -43,7 +54,6 @@
 
 .ref a {
   color: white;
-  /* text-decoration: none; */
   font-size: 1.2rem;
 }
 
@@ -56,23 +66,25 @@
 
 .ref button:hover {
   padding: 0.8rem 1.3rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 /* --------X--------- */
 
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+}
+
 .content {
-  float: left;
-  width: 50vw;
+  width: 47vw;
   text-align: left;
-  position: absolute;
-  top: 55%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  padding-left: 3vw;
 }
 
 .content h1 {
   font-weight: bold;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .content p {
@@ -82,12 +94,13 @@
 }
 
 .box {
-  height: 10vh;
-  width: 38vw;
+  height: 3.5rem;
+  width: 33vw;
   border: 3px solid grey;
   background-color: white;
   border-radius: 0.5rem;
   margin-top: 3%;
+  overflow-y: hidden;
 }
 
 .box i {
@@ -97,35 +110,24 @@
 }
 
 .box input {
-  margin: 5% 10%;
-  width: 55%;
+  margin: 1rem 0.5rem;
+  width: 20vw;
+  font-size: 1.1rem;
   border: none;
 }
 
 .box button {
   background-color: rgba(9, 9, 249, 0.758);
   border-radius: 0.3rem;
-  padding: 2% 3%;
+  padding: 1% 3%;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: none;
+  overflow-y: hidden;
 }
 
 .box button:hover {
   padding: 2.5% 3.5%;
-}
-
-.homeimg {
-  float: right;
-  width: 50%;
-  /* border: 2px solid red; */
-}
-
-.homeimg img {
-  margin: 5% 5%;
-  height: 90vh;
-  width: 40vw;
-  border-radius: 50% 50% 0 0;
 }
 
 .price {
@@ -139,40 +141,59 @@
   font-style: italic;
 }
 
+.homeimg {
+  width: 44vw;
+}
+
+.homeimg img {
+  margin: 5% 2%;
+  height: 80vh;
+  width: 40vw;
+  border-radius: 50% 50% 0 0;
+}
+
 /* --------Residencies----------------- */
 
 .symbol {
   display: flex;
   justify-content: space-between;
-
-  /* border: 2px solid red; */
 }
 
 .symbol img {
   width: 15vw;
-  margin: 5% 10%;
+  margin: 5vh 2vw;
 }
 
 .heading {
-  margin: 5%;
+  margin: 4vh 3vw;
   /* color:indigo; */
+}
+
+.mess {
+  margin: "5vh";
 }
 
 .scrollimage {
   display: flex;
   padding: 4% 5%;
   width: 90%;
+  overflow-x: auto;
 }
 
 .scroll {
-  padding: 0% 5% 2% 0;
-  width: 100vw;
+  padding: 0% 5% 2% 0%;
+  width: 98vw;
+  height: 40%;
 }
 
 .scroll img {
   width: 100%;
   height: 70%;
   border-radius: 1rem;
+}
+
+.scroll p {
+  font-size: 1.2rem;
 }
 
 .arrowbutton {
@@ -186,17 +207,16 @@
 /* ----------------------------       Ourvalue          ------------------------- */
 
 .value {
-  /* border: 2px solid green; */
   display: flex;
-  height: 100vh;
+  /* height: 105vh; */
   position: relative;
 }
 
 .figure {
   width: 50%;
-  margin-top: 6%;
+  margin-top: 4vh;
   padding-left: 5%;
-  /* border: 2px solid red; */
+  overflow-y: hidden;
 }
 
 .figure img {
@@ -207,7 +227,8 @@
 
 .valuecontent {
   width: 40%;
-  margin-top: 6%;
+  margin-top: 6vh;
+  overflow-y: hidden;
 }
 
 .valueheading h2 {
@@ -218,11 +239,12 @@
 .valueheading h1 {
   padding: 1rem 0;
   font-weight: bolder;
+  font-size: 2rem;
 }
 
 .valueheading p {
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgb(68, 67, 67);
 }
 
@@ -230,9 +252,14 @@
   width: 95%;
   border: 1px solid black;
   border-radius: 0.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+
   /* box-shadow:  3px 8px lightblue; */
+}
+
+.benifithead p {
+  font-size: 1.2rem;
 }
 
 .bhead {
@@ -264,11 +291,11 @@
 }
 
 .contactdetail {
-  width: 50%;
+  width: 50vw;
 }
 
 .contactdetail h2 {
-  margin-top: 8%;
+  margin-top: 6%;
   color: orange;
   font-size: 1.8rem;
   font-weight: bold;
@@ -282,18 +309,18 @@
 
 .contactdetail p {
   color: rgb(68, 67, 67);
-  font-size: 1rem;
-  margin-bottom: 8%;
+  font-size: 1.2rem;
+  margin-bottom: 8vh;
 }
 
 .callformat {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 48vw;
 }
 
 .call {
-  width: 35%;
+  width: 16vw;
   border: 0.2px solid grey;
   margin-left: 6%;
   margin-bottom: 4%;
@@ -307,11 +334,11 @@
   margin-bottom: 2%;
   background-color: rgba(201, 235, 247, 0.555);
   box-shadow: 0px 10px rgba(21, 135, 180, 0.3);
+  overflow-y: hidden;
 }
 
 .calldesign {
   display: flex;
-  height: 70%;
 }
 
 .calldesign i {
@@ -323,7 +350,7 @@
   padding-top: 4%;
   height: 50%;
   text-align: center;
-  border-radius: 0.5rem;
+  overflow-x: hidden;
 }
 
 .call button {
@@ -337,21 +364,23 @@
   text-align: center;
   width: 100%;
   border: none;
+  overflow-y: hidden;
 }
 
 .call button:hover {
   background-color: blue;
   color: white;
+  overflow-y: hidden;
 }
 
 .contactImage {
-  width: 50%;
+  width: 48%;
 }
 
 .contactImage img {
-  height: 90%;
+  height: 85%;
   width: 90%;
-  padding: 3% 10%;
+  padding: 5% 10%;
   border-radius: 50% 50% 0% 0%;
 }
 
@@ -399,7 +428,6 @@
   display: flex;
   justify-content: space-between;
   width: 94%;
-  /* border: 2px solid green; */
 }
 
 .end1 p {
@@ -432,27 +460,38 @@
   color: black;
   font-weight: bold;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* --------------------------------------------------------- */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1080px) {
+  .box {
+    width: 45vw;
+  }
+
+  .box input {
+    width: 20vw;
+  }
+
+  /* ----footer----- */
+}
+
+@media screen and (max-width: 750px) {
   * {
-    font-size: 12px;
+    font-size: 70%;
   }
 
   .navpage {
     background-color: rgba(0, 0, 0, 0);
-    height: 0;
+    height: 0vh;
   }
 
   .n1 {
-    background-color: rgba(75, 12, 12, 0.5);
-    width: 50vw;
-    height: 100vh;
     position: absolute;
-    right: 0%;
-    top: 0%;
+    background-color: rgba(75, 12, 12, 0.5);
+    width: 80vw;
+    height: 100vh;
     z-index: 1000;
     visibility: visible;
     translate: 2s ease;
@@ -485,11 +524,9 @@
   }
 
   .menu {
-    position: sticky;
-    top: 2vh;
-    left: 90vw;
     cursor: pointer;
-    width: 0vh;
+    width: 10vh;
+    height: 10vh;
   }
 
   .menubar {
@@ -516,41 +553,45 @@
 
   /* ---------- */
 
-  .homepage {
-    background-image: url("https://img.freepik.com/free-photo/modern-business-building-with-glass-wall-from-empty-floor_1127-3084.jpg?w=996&t=st=1689581329~exp=1689581929~hmac=285f9504371bf854d9d80ddffdffaa5db8b0eaa81d56e73480d4500845d8f3c8");
+  /* #home {
     height: 140vh;
+  } */
+
+  .homepage {
+    flex-direction: column;
+    justify-content: space-between;
     width: 100vw;
   }
 
   .content {
     text-align: center;
-    height: 80vh;
     width: 100vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .content h1 {
     font-weight: bold;
-    font-size: 4rem;
+    /* font-size: 4rem; */
     text-align: center;
   }
 
   .content p {
     color: green;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
   }
 
   .box {
-    height: 10vh;
-    width: 70vw;
+    width: 55vw;
     margin: 3vh auto;
   }
 
   .box input {
-    width: 25vw;
+    width: 30vw;
+    font-size: 1.2rem;
+  }
+
+  .box button,
+  .box i {
+    margin: 0rem 0.4rem;
   }
 
   .box button:hover {
@@ -558,14 +599,11 @@
   }
 
   .homeimg {
-    width: 100%;
-    position: absolute;
-    top: 145vh;
+    width: 100vw;
   }
 
   .homeimg img {
     margin: 0%;
-    height: 90vh;
     width: 100vw;
     border-radius: 0.5rem;
   }
@@ -574,6 +612,8 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    width: 92vw;
   }
 
   .pricevalue p {
@@ -585,16 +625,15 @@
 
   /* -------res -----------------------*/
 
-  .residencies {
-    position: relative;
-    top: 83vh;
-  }
-
   .symbol {
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.2);
+    /* height: 170vh; */
+    margin-bottom: 2vh;
+    width: 100vw;
   }
 
   .symbol img {
@@ -602,10 +641,14 @@
     margin: 4vh auto;
   }
 
+  .mess {
+    text-align: center;
+  }
+
   .scrollimage {
     display: flex;
     flex-direction: column;
-    padding: 2% 5%;
+    padding: 0% 5%;
     width: 90vw;
   }
 
@@ -623,7 +666,7 @@
   .scroll p,
   .scroll h2 {
     text-align: center;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .A1 {
@@ -638,8 +681,6 @@
 
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 80vh;
   }
 
   .figure {
@@ -649,7 +690,7 @@
   }
 
   .figure img {
-    height: 100vh;
+    height: 60vh;
     width: 80vw;
     margin: 2vh 4vw;
   }
@@ -660,17 +701,9 @@
     text-align: center;
   }
 
-  .valueheading h2 {
-    font-size: 2.4rem;
-  }
-
   .valueheading h1 {
     padding: 1rem 0;
-    font-size: 3rem;
-  }
-
-  .valueheading p {
-    font-size: 1.2rem;
+    /* font-size: 3rem; */
   }
 
   .benifithead {
@@ -678,23 +711,12 @@
     margin: 3vh auto;
   }
 
-  .bhead h3 {
-    font-size: 1.5rem;
-  }
-
-  .b1 {
-    font-size: 1.5rem;
-  }
-
-  .benifithead p {
-    font-size: 1.2rem;
-  }
-
   /* ------------------------ contact  ----------------------- */
 
   .Contact {
-    position: relative;
-    top: 200vh;
+    /* position: relative;
+    top: 145vh; */
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
   }
@@ -706,16 +728,12 @@
 
   .contactdetail h2 {
     margin-top: 0vh;
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
     padding-bottom: 2%;
   }
 
-  .contactdetail h1 {
-    font-size: 3rem;
-  }
-
   .contactdetail p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     padding-top: 1vh;
   }
 
@@ -728,10 +746,6 @@
     width: 80vw;
     margin-left: 4vw;
     margin-bottom: 4vh;
-  }
-
-  .calldesign i {
-    font-size: 2.3rem;
   }
 
   .contactImage {
@@ -748,26 +762,9 @@
 
   /* ----------footer  ----------------- */
 
-  .footer {
-    position: relative;
-    top: 195vh;
-  }
-
   .getstarted {
     width: 90vw;
     margin: 0% 5vw;
-  }
-
-  .getstarted p {
-    font-size: 1.3rem;
-  }
-
-  .getstarted button {
-    font-size: 1.2rem;
-  }
-
-  .getstarted button:hover {
-    font-size: 1.4rem;
   }
 
   .end {
@@ -780,7 +777,7 @@
 
   .end1 p {
     padding: 0%;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .end2 {
@@ -788,26 +785,53 @@
     margin-top: 5vh;
   }
 
-  .end2 h1 {
-    font-size: 3.5rem;
-  }
-
   .end2 p {
     padding: 1% 0%;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .endol {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
-    margin: 2vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2vh 10vw;
+    font-size: 1.4rem;
   }
 
   .endol li {
-    padding: 0% 0% 2vh 0vh;
+    padding: 2vh;
     color: black;
     font-weight: bold;
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  * {
+    font-size: 70%;
+  }
+
+  .n1 {
+    width: 100vw;
+  }
+  .box {
+    width: 78vw;
+  }
+
+  .box input {
+    width: 55%;
+  }
+
+  .box button {
+    font-size: 1rem;
+  }
+
+  .symbol {
+    margin: 0%;
+  }
+
+  .symbol img {
+    margin: 0% auto;
   }
 }
