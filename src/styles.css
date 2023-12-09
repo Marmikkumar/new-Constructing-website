@@ -18,7 +18,7 @@ button {
 #home {
   background-image: url("https://img.freepik.com/free-photo/modern-business-building-with-glass-wall-from-empty-floor_1127-3084.jpg?w=996&t=st=1689581329~exp=1689581929~hmac=285f9504371bf854d9d80ddffdffaa5db8b0eaa81d56e73480d4500845d8f3c8");
   width: 100vw;
-  margin: 0 auto;
+  margin: 0;
   overflow-x: hidden;
 }
 
